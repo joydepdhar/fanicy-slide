@@ -64,11 +64,9 @@ const createSlider = () => {
     alert('Select at least 2 image.')
     return;
   }
-
-
   const container = sliders.length;
   console.log(container);
-  document.getElementById('sliderQuantity').innerHTML = `<h1 class="text-primary text-center">Showing slider of ${container} images</h1>`; 
+  document.getElementById('sliderQuantity').innerHTML = `<h1 class="text-primary text-center">Number of Slide: ${container} Photograph</h1>`; 
   // create slider previous next area
   sliderContainer.innerHTML = '';
   const prevNext = document.createElement('div');
@@ -98,7 +96,7 @@ const createSlider = () => {
     }, duration);
   }
   else {
-    alert("Time duration can't be negative!");
+    alert("Duration of time can't be negative!");
     document.getElementById('sliderPreview').innerHTML = `
       <h1 class="text-danger">Please enter a valid time duaration</h1>
       `;
